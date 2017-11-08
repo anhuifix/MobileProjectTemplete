@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.hospital.yilian.mobiledoctors"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:0.5'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+
+
+    compile 'top.zibin:Luban:1.0.9'
+    compile 'org.xutils:xutils:3.3.40'
+    compile 'com.github.zhaokaiqiang.klog:library:0.0.1'
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.mylhyl:circleDialog:2.1.6'
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+}
